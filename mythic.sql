@@ -84,6 +84,15 @@ ENGINE=InnoDB
 AUTO_INCREMENT=16
 ;
 
+DROP TABLE IF EXISTS `weed_plants`;
+CREATE TABLE IF NOT EXISTS `weed_plants` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`data` LONGTEXT NOT NULL COLLATE 'utf8mb4_general_ci',
+	PRIMARY KEY (`id`) USING BTREE
+)
+COLLATE='utf8mb4_general_ci'
+ENGINE=InnoDB;
+
 DROP TABLE IF EXISTS `sequence`;
 CREATE TABLE IF NOT EXISTS `sequence` (
   `id` VARCHAR(64) NOT NULL COLLATE 'utf8mb4_unicode_520_ci',
